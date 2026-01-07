@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
-import Dashboard from "./pages/Dashboard";
+import ddDashboard from "./pages/Dashboard";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route
-          path="/url"
+          path="/dashboard"
           element={
             <ProtectedRoute>
               <Dashboard />
