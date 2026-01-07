@@ -3,6 +3,8 @@ import { useDeleteUrlMutation } from "../features/url/urlApi";
 export default function UrlTable({ urls }) {
   const [deleteUrl] = useDeleteUrlMutation();
 
+  console.log(urls)
+
   return (
     <table className="w-full border">
       <thead className="bg-gray-100">
@@ -16,7 +18,9 @@ export default function UrlTable({ urls }) {
       <tbody>
         {urls.map((u) => (
           <tr key={u._id}>
-            <td className="border p-2 truncate">{u.originalUrl}</td>
+          
+                <td className="border p-2   break-all">{u.originalUrl}</td>
+            
             <td className="border p-2">
               <a href={`http://localhost:5000/${u.shortCode}`} target="_blank" className="text-blue-600">
                 {u.shortCode}
@@ -28,6 +32,8 @@ export default function UrlTable({ urls }) {
             </td>
           </tr>
         ))}
+
+        
       </tbody>
     </table>
   );
