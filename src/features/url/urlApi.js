@@ -4,7 +4,7 @@ export const urlApi = createApi({
   reducerPath: "urlApi",
   tagTypes: ["Url"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000",
+    baseUrl: "https://url-shortner-backend-lyart.vercel.app",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("token");
       if (token) {
