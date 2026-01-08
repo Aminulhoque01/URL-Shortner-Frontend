@@ -11,7 +11,7 @@ export default function Login() {
   const submit = async () => {
     const res = await login({ email, password }).unwrap();
     localStorage.setItem("token", res.token);
-    navigate("/dashboard");
+    navigate("/");
   };
 
   return (
